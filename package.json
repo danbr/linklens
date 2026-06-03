@@ -1,0 +1,25 @@
+{
+  "name": "@danbr/linklens",
+  "version": "0.1.0",
+  "description": "Turn raw social links into structured context packs for coding agents.",
+  "type": "module",
+  "bin": {
+    "linklens": "./bin/linklens.mjs"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "agents",
+    "codex",
+    "open-source",
+    "x",
+    "twitter",
+    "summarization"
+  ],
+  "author": "Dan Bartlett",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}
