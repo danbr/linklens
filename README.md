@@ -23,6 +23,8 @@ node bin/linklens.mjs "https://x.com/openai/status/123"
 ```sh
 linklens "https://x.com/user/status/123"
 linklens "https://x.com/user/status/123" --json
+linklens bookmarks ./bookmarks.json --out ./bookmark-brain
+linklens adr-check
 ```
 
 Markdown output includes:
@@ -33,6 +35,18 @@ Markdown output includes:
 - a reusable agent brief prompt
 
 JSON output is suitable for downstream agent tools.
+
+The bookmark importer accepts JSON, JSONL, or CSV exports from common X bookmark exporters and writes one markdown note per usable bookmark. Each note keeps the original link, post text, author, available engagement metrics, stable topic tags, and an agent prompt for mapping the saved idea into concrete work.
+
+## Repo Decisions
+
+Architecture and positioning decisions live in `docs/adr/`. Agents should read those records before changing source adapters, schemas, prompts, or public copy.
+
+Run the guardrail with:
+
+```sh
+npm run adr:check
+```
 
 ## Why this exists
 

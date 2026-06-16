@@ -7,6 +7,7 @@
     "linklens": "./bin/linklens.mjs"
   },
   "scripts": {
+    "adr:check": "node bin/linklens.mjs adr-check",
     "test": "node --test"
   },
   "keywords": [
